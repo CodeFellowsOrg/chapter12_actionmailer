@@ -1,19 +1,8 @@
-# Chapter 12: ActionMailer in Rails 3.2
-
-### Clone Heroku's Cedar Platform Locally with RVM
-
-    rvm install 1.9.2-p290 -n cedar
-    rvm use ruby-1.9.2-p290-cedar@global
-    rvm rubygems 1.3.7
-    gem uninstall bundler json rake rdoc
-    gem install bundler -v 1.1.rc.7 --pre
-
-### Initialize the Rails app
-
-    git clone https://github.com/ryansobol/chapter12_actionmailer.git
-    cd chapter12_actionmailer
-    gem install rails -v 3.2.1
-    rails new .
-    rails g scaffold user name:string email:string
-    rake db:migrate
-    rm public/index.html
+rails _3.2.13_ new email_exercise --skip-test-unit
+cd email_exercise
+rails g scaffold user name:string email:string
+rake db:migrate
+rm public/index.html
+git init 
+git add .
+git commit -m 'initial rails app with user scaffold'
